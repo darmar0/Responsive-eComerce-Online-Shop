@@ -23,7 +23,7 @@ const Comments = (props) => {
       dispatch(actionCreators.SEND_COMMENT(comment, props.product.id));
     }
   };
-  console.log(input);
+
   return (
     <div className="commentsBox">
       <div className="spread" onClick={() => updateStyle(style.display === "none" ? { display: "contents" } : { display: "none" })}>

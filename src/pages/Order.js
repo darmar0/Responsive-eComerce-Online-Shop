@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import CheckoutSteps from "../components/CheckoutSteps.js";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import * as actionCreators from "../redux/actionCreators.js";
-import OrderItems from "../components/OrderItems.js";
+import React from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 const Order = () => {
   const id = useParams().id;
   const order = useSelector((state) => state.orders.filter((i) => i.orderId === id))[0];
-  const dispatch = useDispatch();
   const subItem = order.items.map((x, i) => x.productQuantity * order.items[i].productPrice);
   const subtotal = subItem.length > 0 ? parseInt(Number(subItem.reduce((a, b) => a + b)).toFixed(2)) : 0;
   var today = new Date();
@@ -18,10 +13,6 @@ const Order = () => {
   var yyyy = today.getFullYear();
 
   today = dd + "/" + mm + "/" + yyyy;
-
-  const orderPlace = () => {
-    dispatch(actionCreators.EMPTY_CART());
-  };
 
   return (
     <div className="orderPage">
@@ -52,7 +43,7 @@ const Order = () => {
           <div className="itemsOrder">
             <ul>
               {order.items.map((i) => (
-                <li>
+                <li key={i.id}>
                   <p>
                     {i.productQuantity} x {i.productName}
                   </p>

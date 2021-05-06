@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CheckoutSteps from "../components/CheckoutSteps.js";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";

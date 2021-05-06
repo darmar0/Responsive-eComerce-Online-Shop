@@ -50,7 +50,7 @@ const App = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(windowDimensions.width);
+
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -58,7 +58,7 @@ const App = () => {
           <header style={{ maxWidth: windowDimensions.width }} className="header">
             <div className="brand">
               <button onClick={() => handelMenu()}>
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i className="fa fa-bars" aria-hidden="true"></i>
               </button>
               <a className="barcode" href="/">
                 21
@@ -138,10 +138,10 @@ const App = () => {
                 <i className="fa fa-github" aria-hidden="true" style={{ fontSize: "2.6rem" }}></i>
               </a>
               <a href="https://www.linkedin.com/in/darijan-martinovi%C4%87-363464a1/" target="0">
-                <i class="fa fa-linkedin-square" aria-hidden="true" style={{ fontSize: "2.6rem" }}></i>
+                <i className="fa fa-linkedin-square" aria-hidden="true" style={{ fontSize: "2.6rem" }}></i>
               </a>
               <a href="https://www.instagram.com/_darmar___/?hl=en" target="0">
-                <i class="fa fa-instagram" aria-hidden="true" style={{ fontSize: "2.6rem" }}></i>
+                <i className="fa fa-instagram" aria-hidden="true" style={{ fontSize: "2.6rem" }}></i>
               </a>
             </div>
           </footer>

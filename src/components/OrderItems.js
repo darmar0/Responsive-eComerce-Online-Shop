@@ -5,7 +5,7 @@ const OrderItems = (props) => {
 
   return (
     <div className="orderItems">
-      <img src={props.item.productImage[1]} className="orderImg"></img>
+      <img src={props.item.productImage[1]} className="orderImg" alt={props.item.productName}></img>
       <a href={`/product/${productLink}/${props.item.id}`}>
         <h3>{props.item.productName}</h3>
       </a>

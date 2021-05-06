@@ -16,7 +16,6 @@ const reducer = (state = data, action) => {
     case actions.REG_NEW_ACC:
       return { ...state, accounts: [...state.accounts, action.payload.acc] };
     case actions.SIGN_IN_ACC:
-      let user = state.filter((i) => i.email === action.payload.acc.email && i.password === action.payload.acc.password);
       return { ...state, accounts: action.payload.acc };
     case actions.SEND_COMMENT:
       let product = state.stockData.filter((i) => action.payload.id === i.id)[0];
@@ -36,13 +35,10 @@ const reducer = (state = data, action) => {
       let newOrders = state.orders.filter((i) => i.orderId !== action.payload.id).concat(paymentOrdr);
       return { ...state, orders: newOrders };
     case actions.ORDER_ITEMS:
-      console.log("radi");
       let findOrder = state.orders.find((i) => i.orderId === action.payload.id);
       let itemsOrdr = { ...findOrder, items: action.payload.items };
       let newOrdersArray = state.orders.filter((i) => i.orderId !== action.payload.id).concat(itemsOrdr);
-      console.log(newOrdersArray);
       return { ...state, orders: newOrdersArray };
-      return;
     case actions.EMPTY_CART:
       return { ...state, cartItems: [] };
     case actions.PLACE_ORDER:

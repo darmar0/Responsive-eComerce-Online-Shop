@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../data.js";
 import Ratings from "../components/Ratings.js";
 import Comments from "../components/Comments.js";
 import RelatedProducts from "../components/RelatedProducts.js";
@@ -22,23 +21,20 @@ const ProductPage = (props) => {
       <div className="productBox">
         <div className="imageBox">
           <div className="imgSelect">
-            <a>
+            <img
+              alt={product.productName}
+              className={imgLarge === product.productImage[1] ? "productImageSmallShadow" : "productImageSmall"}
+              src={product.productImage[1]}
+              onClick={(e) => setImg(e.target.src)}
+            ></img>
+
+            {product.productImage[2] ? (
               <img
                 alt={product.productName}
-                className={imgLarge === product.productImage[1] ? "productImageSmallShadow" : "productImageSmall"}
-                src={product.productImage[1]}
+                className={imgLarge === product.productImage[2] ? "productImageSmallShadow" : "productImageSmall"}
+                src={product.productImage[2]}
                 onClick={(e) => setImg(e.target.src)}
               ></img>
-            </a>
-            {product.productImage[2] ? (
-              <a>
-                <img
-                  alt={product.productName}
-                  className={imgLarge === product.productImage[2] ? "productImageSmallShadow" : "productImageSmall"}
-                  src={product.productImage[2]}
-                  onClick={(e) => setImg(e.target.src)}
-                ></img>
-              </a>
             ) : null}
           </div>
 
