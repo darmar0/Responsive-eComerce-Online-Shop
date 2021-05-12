@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 const CartPage = (props) => {
   const state = useSelector((state) => state);
   const history = useHistory();
-
   const subItem = state.cartItems.map((x, i) => x.productQuantity * state.cartItems[i].productPrice);
   const subtotal = subItem.length > 0 ? Number(subItem.reduce((a, b) => a + b)).toFixed(2) : 0;
   const subItemsQty = state.cartItems.length > 0 ? state.cartItems.map((i) => i.productQuantity).reduce((a, b) => a + b) : 0;
+
+  console.log(state.cartItems);
 
   const checkout = () => {
     if (!props.user) {

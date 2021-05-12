@@ -20,7 +20,7 @@ const Register = () => {
   };
 
   return (
-    <div className="accountPage">
+    <div className="accountPageReg">
       <div className="inputForm">
         <h2>Create account</h2>
         <p>Name</p>
