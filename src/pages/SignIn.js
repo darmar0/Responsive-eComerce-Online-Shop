@@ -26,7 +26,7 @@ const SignIn = () => {
       <div className="inputForm">
         {notFound ? (
           <div className="accNotFound">
-            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
             <div className="accNotFoundTex">
               <h4>There was a problem</h4>
               <p>{notFound}</p>
@@ -35,7 +35,7 @@ const SignIn = () => {
         ) : null}
         <h2>Sign in</h2>
         <p>Email adress</p>
-        <input p onChange={(e) => setAcc({ ...acc, email: e.target.value })}></input>
+        <input onChange={(e) => setAcc({ ...acc, email: e.target.value })}></input>
         <p>Password</p>
         <input onChange={(e) => setAcc({ ...acc, password: e.target.value })} type="password"></input>
         <button className="accButton" onClick={() => signIn()}>

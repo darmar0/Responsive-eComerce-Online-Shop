@@ -36,7 +36,7 @@ const PlaceOrder = () => {
               <p> {order.shippingInfo.fullName}</p>
             </div>
             <div className="cardBody">
-              <h4>Shipping Adress:</h4>{" "}
+              <h4>Adress:</h4>{" "}
               <p>
                 {order.shippingInfo.adress}, {order.shippingInfo.postalCode}, {order.shippingInfo.city}, {order.shippingInfo.country}
               </p>

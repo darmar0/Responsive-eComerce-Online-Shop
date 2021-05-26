@@ -88,11 +88,19 @@ const App = () => {
                   </ul>
                 </div>
               ) : (
-                <NavLink to="/signin">Sign in</NavLink>
+                <div className="signElement">
+                  <NavLink to="/signin">Sign in</NavLink>
+                </div>
               )}
             </div>
           </header>
-          <SideBar click={click} handelMenu={handelMenu} categorySelect={categorySelect} windowDimensions={windowDimensions} />
+          <SideBar
+            click={click}
+            handelMenu={handelMenu}
+            categorySelect={categorySelect}
+            windowDimensions={windowDimensions}
+            signOutHandeler={signOutHandeler}
+          />
           <main style={{ maxWidth: windowDimensions.width }} className="main">
             <Route path="/product/:productName/:id">
               <ProductPage user={user} />

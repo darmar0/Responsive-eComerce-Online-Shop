@@ -12,7 +12,10 @@ const SideBar = (props) => {
     let parsedUser = localStorage.getItem("user");
     userSignIn(parsedUser !== null ? JSON.parse(parsedUser) : undefined);
   }, []);
-
+  const signOut = () => {
+    props.signOutHandeler();
+    props.handelMenu();
+  };
   const style =
     props.click === 0 && props.windowDimensions.width < 550
       ? { transform: `translateX(${-props.windowDimensions.width}px)` }
@@ -59,6 +62,24 @@ const SideBar = (props) => {
               </span>
             </li>
           </NavLink>
+        </ul>
+      </div>
+      <div className="navMenu">
+        <h3>Account</h3>
+        <ul>
+          {user ? (
+            <NavLink to="/signin">
+              <li className="signOutSideBar" onClick={signOut}>
+                <p>Sign out</p>
+              </li>
+            </NavLink>
+          ) : (
+            <NavLink to="/signin">
+              <li className="signOutSideBar" onClick={() => props.handelMenu()}>
+                Sign in
+              </li>
+            </NavLink>
+          )}
         </ul>
       </div>
     </div>
