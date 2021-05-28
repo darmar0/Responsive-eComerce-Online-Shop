@@ -1195,6 +1195,24 @@ select:focus {
   .itemDesc {
     flex: 0 0 45vw;
   }
+  .products a {
+    text-decoration: none;
+    list-style-type: none;
+    flex: 0 1 15rem;
+    padding: 1rem;
+    background-color: white;
+    border: 0.3rem solid white;
+    border-radius: 6px;
+  }
+  .productImage {
+    width: 15rem;
+  }
+  .products {
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 1rem 6rem 1rem;
+  }
 }
 @media screen and (max-width: 1024px) {
   .signElement {
