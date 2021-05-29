@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Known-issues](#Known issues)
+* [Issues](#Known issues)
 
 
 
