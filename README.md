@@ -21,7 +21,7 @@ Project is created with:
 * React-router-dom version : 5.2.0
 * React-redux version : 7.2.3
 
-##Issues
+## Issues
 
 At the moment, the app still has problems with Safari browser flexbox adjustment.
 
