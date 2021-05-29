@@ -1,12 +1,15 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [Known issues](#Known issues)
 
 
 
 ## General info
 
-Online shop front-end demonstration. App state is managed with Redux, and it is persisted in browser local storage.
+Goal was to create an online shop with redux state management , CSS grids and flexbox responsive styling.
+App state is managed with Redux, and it is persisted in browser local storage.
+
 
 Here is a link to live demo presentation: 
 
@@ -18,4 +21,7 @@ Project is created with:
 * React-router-dom version : 5.2.0
 * React-redux version : 7.2.3
 
+## Known issues
+
+At the moment, the app still has problems with Safari browser flexbox adjustment.
 
